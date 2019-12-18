@@ -17,14 +17,14 @@ if(isset($_SESSION['user'])){
     </head>
     <body>
       <form class="form-signin" method="POST">
-        <img class="mb-4" src="./src/logo.png" alt="" width="72" height="72">
+        <div class="text-center"><img class="mb-4" src="./src/logo.svg" alt="Logo" width="150" height="150"></div>
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <label for="email" class="sr-only">Email address</label>
         <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required autofocus>
         <label for="password" class="sr-only">Password</label>
         <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-muted">&copy;  <?php echo date('Y'); ?> Wheels LLC</p>
+        <p class="mt-5 mb-3 text-muted text-center">&copy;  <?php echo date('Y'); ?> Wheels LLC</p>
       </form>
       <?php } ?>
     </body>
