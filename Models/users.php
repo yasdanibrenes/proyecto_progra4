@@ -11,7 +11,7 @@
     /**
      * Constructor
      * @param string $pname nombre del usuario
-     * @param int $pemail correo del usuario
+     * @param string $pemail correo del usuario
      * @param string $ppassword contraseña del usuario 
      * @param int $pid ID del usuario
      */
@@ -27,18 +27,18 @@
      * @param Users $content Objeto de tipo usuario
      * @return boolean si fue exitoso el insert
      */
-    public function insert(users $content){
+    public function insert(Users $content){
         try {
         // Abro la base de datos
         $conect = new Connection();
         $pdo = $conect->openConnection();
         // EJECUTAR SENTENCIA 
-        $query = "INSERT INTO user (name, email, password) VALUES ('".$content->name."',".$content->email.",'".$content->password."')";
+        $query = "INSERT INTO user (id, name, email, password) VALUES ('".$content->id."','".$content->name."','".$content->email."','".$content->password."')";
         if($pdo->query($query)){
             return TRUE;
         }
         } catch (Exception $exc) {
-        error_log("Error en la ".__FUNCTION__.":". $exc->getTraceAsString());
+        error_log("Error in ".__FUNCTION__.":". $exc->getTraceAsString());
         }
         return FALSE;
     }
@@ -104,10 +104,10 @@
     
     /**
      * Actualiza un elemento en la base datos usando la tala producto
-     * @param users $content Objeto de tipo BasicContent
+     * @param Users $content Objeto de tipo BasicContent
      * @return boolean si fue exitoso el insert
      */
-    public function update(users $content){
+    public function update(Users $content){
         try {
         // Abro la base de datos
         $conect = new Connection();
@@ -122,4 +122,4 @@
         }
         return FALSE;
     }
-    }
+}

@@ -12,8 +12,20 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="admin-basicContent.php">
+                        <span data-feather="file"></span>
+                        Basic Content
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-services.php">
+                        <span data-feather="zap"></span>
+                        Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="admin-products.php">
-                        <span data-feather="shopping-cart"></span>
+                        <span data-feather="package"></span>
                         Products
                         </a>
                     </li>
@@ -94,7 +106,7 @@
                 </div>
             </div>
 
-            <canvas class="my-4 w-100" id="myChart" width="900" height="200"></canvas>
+            <canvas class="my-4 w-100" id="myChart" width="800" height="200"></canvas>
 
             <h2>Section title</h2>
             <div class="table-responsive">

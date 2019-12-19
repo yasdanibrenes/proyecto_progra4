@@ -23,9 +23,9 @@
             <div class="col-6 col-md">
                 <h5>Resources</h5>
                 <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="login.php">Login</a></li>
                     <li><a class="text-muted" href="#">Privacy</a></li>
                     <li><a class="text-muted" href="#">Terms</a></li>
-                    <li><a class="text-muted" href="login.php">Login</a></li>
                 </ul>
             </div>
             </div>

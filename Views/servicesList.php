@@ -16,9 +16,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="admin-services.php">
+                        <a class="nav-link active" href="admin-services.php">
                         <span data-feather="zap"></span>
-                        Services
+                        Services <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -37,9 +37,9 @@
                 </h6>
                 <ul class="nav flex-column mb-2">
                     <li class="nav-item">
-                        <a class="nav-link active" href="admin-users.php">
+                        <a class="nav-link" href="admin-users.php">
                         <span data-feather="users"></span>
-                        Users <span class="sr-only">(current)</span>
+                        Users 
                         </a>
                     </li>
                 </ul>
@@ -48,7 +48,7 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Users</h1>
+                <h1 class="h2">Services</h1>
                 <div>
                     <a class="d-flex align-items-center text-muted" href="admin.php" aria-label="Back Home" title="Back to Home">
                         <span data-feather="home"></span>
@@ -64,10 +64,10 @@
                 <table class="table table-striped table-sm">
                 <thead>
                     <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Password</th>
+                    <th>Tittle</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Image</th>
                     <th></th>
                     </tr>
                 </thead>
@@ -76,17 +76,17 @@
                     if (count($elements)) {
                         foreach ($elements as $element) {
                             echo '<tr>
-                                    <td>' . $element->get_element("id") . '</td>
-                                    <td>' . $element->get_element("name") . '</td>
-                                    <td>' . $element->get_element("email") . '</td>
-                                    <td><input class="showInputPass" type="password" value="' . $element->get_element("password") . '" readonly></td>
-                                    <td><a href=admin-users.php?c=edit&id=' . $element->get_element("id") . '><span data-feather="edit-2"></span> Edit </a>'
-                                    . '<a href=admin-users.php?c=view&id=' . $element->get_element("id") . '><span data-feather="eye"></span> View </a>'
-                                    . '<a href=admin-users.php?c=delete&id=' . $element->get_element("id") . '><span data-feather="trash-2"></span> Delete</a></td>
+                                    <td>' . $element->get_element("tittle") . '</td>
+                                    <td>' . substr($element->get_element("description"),0,100) . '</td>
+                                    <td>' . $element->get_element("price") . '</td>
+                                    <td>' . $element->get_element("img") . '</td>
+                                    <td><a href=admin-services.php?c=edit&id=' . $element->get_element("id") . '><span data-feather="edit-2"></span> Edit </a>'
+                                    . '<a href=admin-services.php?c=view&id=' . $element->get_element("id") . '><span data-feather="eye"></span> View </a>'
+                                    . '<a href=admin-services.php?c=delete&id=' . $element->get_element("id") . '><span data-feather="trash-2"></span> Delete</a></td>
                                 </tr>';
                             }
                         } else {
-                            echo '<h2>No users available to show.</h2>';
+                            echo '<h2>No services available to show.</h2>';
                         }
                     ?>
                 </tbody>
