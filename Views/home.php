@@ -5,7 +5,8 @@
     <div class="container">
                 <?php print $test; ?>
 
+            <?php require_once 'Views/footer.php'; ?> 
     </div>
 
-    <?php require_once 'Views/footer.php'; ?> 
+    
 
