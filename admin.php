@@ -1,8 +1,6 @@
 <?php 
-if(!isset($_SESSION['user'])){ 
-  if (session_status() !== PHP_SESSION_ACTIVE){
-    session_start();
-  }  
+session_start();  
+if (!isset($_SESSION['user'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en" class=" -webkit-">
