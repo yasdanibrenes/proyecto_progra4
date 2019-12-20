@@ -13,7 +13,7 @@
                 </ul>
             </div>
             <div class="col-6 col-md">
-                <h5>Pages</h5>
+                <h5>Company</h5>
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="about.php">About us</a></li>
                     <li><a class="text-muted" href="contact.php">Contact Us</a></li>

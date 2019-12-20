@@ -116,7 +116,7 @@
             $conect = new Connection();
             $pdo = $conect->openConnection();
             // EJECUTAR SENTENCIA 
-            $query = "UPDATE service SET tittle = '".$content->tittle."', description =".$content->description.", price ='".$content->price."', img ='".$content->img."' WHERE id=$content->id";
+            $query = "UPDATE service SET tittle = '".$content->tittle."', description = '".$content->description."', price = '".$content->price."', img = '".$content->img."' WHERE id=$content->id";
             if($pdo->query($query)){
                 return TRUE;
             }

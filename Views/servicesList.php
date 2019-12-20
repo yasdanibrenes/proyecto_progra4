@@ -10,7 +10,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="admin-basicContent.php">
+                        <a class="nav-link" href="admin-content.php">
                         <span data-feather="file"></span>
                         Basic Content
                         </a>
@@ -53,7 +53,7 @@
                     <a class="d-flex align-items-center text-muted" href="admin.php" aria-label="Back Home" title="Back to Home">
                         <span data-feather="home"></span>
                     </a>
-                    <a class="d-flex align-items-center text-muted" href="admin-users.php?c=add" aria-label="Add a new user" title="Add a new user">
+                    <a class="d-flex align-items-center text-muted" href="admin-services.php?c=add" aria-label="Add a new service" title="Add a new service">
                         <span data-feather="plus-circle"></span>
                     </a>
                 </div>

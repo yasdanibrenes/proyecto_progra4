@@ -13,7 +13,7 @@
                     <div class="row featurette">
                       <div class="col-md-7">
                         <h2 class="featurette-heading">' . $element->get_element("tittle") . '</h2>
-                        <p class="text-muted">$' . $element->get_element("price") . ' hour</p>
+                        <p class="text-muted">$' . $element->get_element("price") . ' per unit</p>
                         <p class="lead">' . substr($element->get_element("description"),0,500) . '</p>
                       </div>
                       <div class="col-md-5">

@@ -63,7 +63,7 @@
           }
         }
         $elements = $contenido->select();
-        require 'Views/serviceList.php';
+        require 'Views/servicesList.php';
       break;
     default :
       $contenido = new Services();

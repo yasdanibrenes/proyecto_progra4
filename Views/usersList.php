@@ -10,7 +10,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="admin-basicContent.php">
+                        <a class="nav-link" href="admin-content.php">
                         <span data-feather="file"></span>
                         Basic Content
                         </a>
