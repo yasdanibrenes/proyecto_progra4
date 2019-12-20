@@ -32,7 +32,7 @@
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul>
                             </div>
-                        </div><img src="src/<?php echo (isset($element)) ? $element->get_element('imagen') : '' ?>" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                        </div><img src="src/product/<?php echo (isset($element)) ? $element->get_element('imagen') : '' ?>" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
                     </div>
                     <!-- End -->
                 </li>
