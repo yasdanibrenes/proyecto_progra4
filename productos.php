@@ -2,7 +2,7 @@
 <html lang="en" class=" -webkit-">
     <head>
         <meta charset="UTF-8">
-        <title>Listado de Productos</title>
+        <title>Tires Collection</title>
         <?php include 'Views/head.php'; ?>
     </head>
     <body>
