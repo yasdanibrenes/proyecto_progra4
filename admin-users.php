@@ -8,13 +8,11 @@
         <body>
         <?php require_once "Views/admin_header.php";?>
         <?php
-        if ($_GET) {
-          require_once 'Controllers/' . $_GET['c'] . '.php';
-        } else {
-          require_once "Views/users.php";
-        }
-        ?>
-    <?php require_once "Views/admin_footer.php"; ?>
+          // la variable c enviada por parametro es la accion a ejecutar en caso de no llegar va a ser listado por defecto.
+          $action = (isset($_GET['c'])) ? $_GET['c'] : 'list';
+          require_once 'Controllers/BasicContent.php';
+        
+        require_once "Views/admin_footer.php"; ?>
 
     </body>
 </html>

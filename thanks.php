@@ -2,17 +2,17 @@
 <!DOCTYPE html>
 <html lang="en" class=" -webkit-">
     <head>
-        <title>Wheels - Contact Us</title>
+        <title>Wheels - Thanks</title>
         <?php include 'Views/head.php'; ?>
 
     </head>
     <body>
     <?php require_once "Views/header.php"; ?>
 
-    <div class="container">
-    <?php require_once 'Controllers/contact.php'; 
+    <?php
+        require_once 'Views/thanks.php';
     
-    require_once "Views/footer.php"; ?>
+        require_once "Views/footer.php"; ?>
     <div>
     </body>
 </html>
