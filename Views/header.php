@@ -9,6 +9,6 @@
             <a class="p-2 text-dark" href="contact.php">Contact Us</a>
             <a class="p-2 text-dark" href="support.php">Support</a>
         </nav>
-        <a class="btn btn-outline-primary" href="cart.php">Cart</a>
+        <a class="btn btn-outline-primary" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
     </div>
     </header>

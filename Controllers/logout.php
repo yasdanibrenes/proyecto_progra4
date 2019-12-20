@@ -1,3 +1,4 @@
 <?php
-    session_destroy();
-    header("Location: index.php");
+    require_once 'Models/user.php';
+    $user =  new User();
+    $user->logout();
