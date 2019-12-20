@@ -63,6 +63,7 @@
             $rows = [];
             while($row = $result->fetch()){
                 $rows[] = new Services($row['id'], $row['tittle'], $row['description'], $row['price'], $row['img']);
+                $sCount++;
             }
             return $rows;
             } catch (Exception $ex) {

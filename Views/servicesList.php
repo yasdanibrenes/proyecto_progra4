@@ -86,7 +86,7 @@
                                 </tr>';
                             }
                         } else {
-                            echo '<h2>No services available to show.</h2>';
+                            echo '<h3>No services available to show.</h3>';
                         }
                     ?>
                 </tbody>

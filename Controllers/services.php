@@ -12,8 +12,8 @@
       require 'Views/servicesList.php';
     break;
     case 'add':
-      if(isset($_POST['tittle']) && $_POST['description'] && $_POST['price'] && $_POST['img']){
-        $contenido = new Services($_POST['tittle'], $_POST['description'], $_POST['price'], $_POST['img']);
+      if(isset($_POST['id']) && $_POST['tittle'] && $_POST['description'] && $_POST['price'] && $_POST['img']){
+        $contenido = new Services($_POST['id'], $_POST['tittle'], $_POST['description'], $_POST['price'], $_POST['img']);
         if($contenido->insert($contenido)){
           $msg = "Service has been successfully add";
           $elements = $contenido->select();

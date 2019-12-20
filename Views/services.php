@@ -30,7 +30,7 @@
         <div class="row pageSection">
             <div class="col-md-12 text-center">
                 <h2>Calculator</h2>
-                <p>Calculta the price of our services.</p>
+                <p>Calculate the price of our services.</p>
                 <br>
             </div>
         </div>
