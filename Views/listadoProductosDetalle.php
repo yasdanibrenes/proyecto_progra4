@@ -43,7 +43,7 @@
                 <li class="list-group-item">
                     <!-- Custom content-->
                     <div class="media align-items-lg-center flex-column flex-lg-row p-3">
-                        <a href="productos.php?" class="btn btn-primary"><span data-feather="corner-up-left"></span>Back</a>
+                        <a href="productos.php?" class="btn btn-primary"><i class="fa fa-undo" aria-hidden="true"></i> Back</a>
                     </div>
                     <!-- End -->
                 </li>
