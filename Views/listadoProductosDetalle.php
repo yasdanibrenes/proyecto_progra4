@@ -1,10 +1,10 @@
 <div class="container py-5">
     <?php echo (isset($msg)) ?  '<div class="alert alert-success" role="alert">' . $msg . '</div>' : ''; ?>
 
-    <!-- For demo purpose -->
+    <!-- Page Header -->
     <div class="row text-center text-dark mb-5">
         <div class="col-lg-7 mx-auto">
-            <h1 class="display-4">Detalle de Productos</h1>
+            <h1 class="display-4">Tires Detail</h1>
         </div>
     </div>
     <!-- End -->
@@ -43,7 +43,7 @@
                 <li class="list-group-item">
                     <!-- Custom content-->
                     <div class="media align-items-lg-center flex-column flex-lg-row p-3">
-                        <a href="productos.php?" class="btn btn-primary">Volver</a>
+                        <a href="productos.php?" class="btn btn-primary"><span data-feather="corner-up-left"></span>Back</a>
                     </div>
                     <!-- End -->
                 </li>

@@ -27,17 +27,29 @@ function myFunction() {
     <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
-                <ul class="nav flex-column">
+            <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="admin.php">
-                            <span data-feather="home"></span>
-                            Dashboard
+                        <span data-feather="home"></span>
+                        Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-content.php">
+                        <span data-feather="file"></span>
+                        Basic Content
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-services.php">
+                        <span data-feather="zap"></span>
+                        Services
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="admin-products.php">
-                            <span data-feather="shopping-cart"></span>
-                            Products <span class="sr-only">(current)</span>
+                        <span data-feather="package"></span>
+                        Products <span class="sr-only">(current)</span>
                         </a>
                     </li>
                 </ul>
@@ -75,15 +87,15 @@ function myFunction() {
             
 
             <div class="table-responsive">
-            <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por descripción">
             <?php echo (isset($msg)) ?  '<div class="alert alert-success" role="alert">' . $msg . '</div>' : ''; ?>
+            <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by product description...">
                 <table id="myTable" class="table table-striped table-sm">
                     <thead>
                         <tr>
-                            <th scope="col">Descripcion</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Comentarios</th>
-                            <th scope="col">Imagen</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Comments</th>
+                            <th scope="col">Image</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -96,9 +108,9 @@ function myFunction() {
                                         <td>' . $element->get_element("precio") . '</td>
                                         <td>' . substr($element->get_element("comentarios"), 0, 1000) . '</td>
                                         <td>' . $element->get_element("imagen") . '</td>
-                                        <td><a href=admin-products.php?c=editar&id=' . $element->get_element("id") . '>Edit  </a>'
-                                    . '<a href=admin-products.php?c=ver&id=' . $element->get_element("id") . '>Ver  </a>'
-                                    . '<a href=admin-products.php?c=borrar&id=' . $element->get_element("id") . '>Eliminar  </a></td>
+                                        <td><a href=admin-products.php?c=editar&id=' . $element->get_element("id") . '><span data-feather="edit-2"></span>Edit  </a>'
+                                    . '<a href=admin-products.php?c=ver&id=' . $element->get_element("id") . '><span data-feather="eye"></span> View  </a>'
+                                    . '<a href=admin-products.php?c=borrar&id=' . $element->get_element("id") . '><span data-feather="trash-2"></span>Delete  </a></td>
                                         </tr>';
                             }
                         } else {

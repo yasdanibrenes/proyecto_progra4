@@ -1,10 +1,10 @@
 <div class="container py-5">
     <?php echo (isset($msg)) ?  '<div class="alert alert-success" role="alert">' . $msg . '</div>' : ''; ?>
 
-    <!-- For demo purpose -->
+    <!-- Page Header -->
     <div class="row text-center text-dark mb-5">
         <div class="col-lg-7 mx-auto">
-            <h1 class="display-4">Listado de Productos</h1>
+            <h1 class="display-4">Tires Collection</h1>
         </div>
     </div>
     <!-- End -->
@@ -35,7 +35,7 @@
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul>
                             </div>
-                            <a href=productos.php?c=ver&id=' . $element->get_element("id") . ' class="badge badge-pill badge-primary">Ver detalle</a>
+                            <a href=productos.php?c=ver&id=' . $element->get_element("id") . ' class="badge badge-pill badge-primary">View details »</a>
                         </div><img src="src/product/' . $element->get_element("imagen") . '" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
                     </div>
                     <!-- End -->
