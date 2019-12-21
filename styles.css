@@ -11,6 +11,10 @@ html {
     max-width: 960px;
   }
 
+  .pageSection{
+    padding-top: 100px;
+  }
+
   /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 

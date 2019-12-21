@@ -12,10 +12,10 @@ class support{
 
     public function send_data($email, $name, $message, $to = "yasdani.brenes@ulatina.net"){
         $this->generate_message($email, $name, $message);
-        return mail($to, "Contact", $message);
+        return mail($to, "Support", $message);
     }
 
     public function generate_message($email, $name, $message){
-        return "You have receive a message from ".$name.", email ".$email." and the message is\n".$message; 
+        return "You have receive a support message from ".$name.", email ".$email." and the message is\n".$message; 
     }
 } 
