@@ -61,11 +61,13 @@
             }
             $result = $pdo->query($query);
             $rows = [];
+            $sCount = 1;
             while($row = $result->fetch()){
                 $rows[] = new Services($row['id'], $row['tittle'], $row['description'], $row['price'], $row['img']);
                 $sCount++;
             }
             return $rows;
+            return $sCount;
             } catch (Exception $ex) {
             // Captura de error
             print_r($ex->getTraceAsString());

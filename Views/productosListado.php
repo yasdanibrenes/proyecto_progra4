@@ -113,7 +113,7 @@
                                 echo '<tr>
                                         <td>' . $element->get_element("descripcion") . '</td>
                                         <td>' . $element->get_element("precio") . '</td>
-                                        <td>' . substr($element->get_element("comentarios"), 0, 100) . '</td>
+                                        <td>' . substr($element->get_element("comentarios"), 0, 60) . '</td>
                                         <td>' . $element->get_element("imagen") . '</td>
                                         <td><a href=admin-products.php?c=editar&id=' . $element->get_element("id") . '><span data-feather="edit-2"></span>Edit  </a>'
                                     . '<a href=admin-products.php?c=ver&id=' . $element->get_element("id") . '><span data-feather="eye"></span> View  </a>'

@@ -9,47 +9,47 @@
     
     /**
      * Constructor
-     * @param string $pname nombre del usuario
-     * @param int $pprice correo del usuario
-     * @param int $pid ID del usuario
+     * @param string $pname nombre del carrito
+     * @param int $pprice precio del carrito
+     * @param int $pid ID del carrito
      */
-    public function __construct($pid = 0, $pname = '', $pprice = '') {
+    public function __construct($pid = 0, $pname = '', $pprice = 0) {
         $this->id = $pid;
         $this->name = $pname;
         $this->price = $pprice;
     }
     
     /**
-     * Inserta un elemento en la base datos usando la tabla usuario
-     * @param OrderList $content Objeto de tipo usuario
+     * Inserta un elemento en la base datos usando la tabla carrito
+     * @param OrderList $content Objeto de tipo carrito
      * @return boolean si fue exitoso el insert
      */
-    public function insert(OrderList $content){
+    public function insert($id, $name, $price){
         try {
-        // Abro la base de datos
-        $conect = new Connection();
-        $pdo = $conect->openConnection();
-        // EJECUTAR SENTENCIA 
-        $query = "INSERT INTO temp_cart (id, name, price) VALUES ('".$content->id."','".$content->name."','".$content->price."')";
-        if($pdo->query($query)){
-            return TRUE;
-        }
+            // Abro la base de datos
+            $conect = new Connection();
+            $pdo = $conect->openConnection();
+            // EJECUTAR SENTENCIA 
+            $query = "INSERT INTO temp_cart (id, name, price) VALUES ('".$id."','".$name."','".$price."')";
+            if($pdo->query($query)){
+                return TRUE;
+            }
         } catch (Exception $exc) {
-        error_log("Error in ".__FUNCTION__.":". $exc->getTraceAsString());
+            error_log("Error in ".__FUNCTION__.":". $exc->getTraceAsString());
         }
         return FALSE;
     }
     
     /**
-     * Selecciona uno o todos los elementos dentro de la tabla usurio
+     * Selecciona uno o todos los elementos dentro de la tabla carrito
      * @param int $id Optional nos indica sobre cual elemento iterar 
      * @return boolean 
      */
     public function select($id = 0){
         try{
-        $conect =  new Connection();
-        $pdo = $conect->openConnection();
-        $query = "SELECT id, name, price FROM temp_cart";
+            $conect =  new Connection();
+            $pdo = $conect->openConnection();
+            $query = "SELECT id, name, price FROM temp_cart";
         if($id){
             $query .= " WHERE id='$id'";
         }
@@ -60,32 +60,32 @@
         }
         return $rows;
         } catch (Exception $ex) {
-        // Captura de error
-        print_r($ex->getTraceAsString());
-        error_log("Error in ".__FUNCTION__.":". $ex->getTraceAsString());
+            // Captura de error
+            print_r($ex->getTraceAsString());
+            error_log("Error in ".__FUNCTION__.":". $ex->getTraceAsString());
         }
         return FALSE;
     }
     
     /**
-     * Elimina un elemento de la tabla usuario
+     * Elimina un elemento de la tabla carrito
      * @param type $id
      * @return boolean
      */
     public function delete($id){
         try{
-        $conect =  new Connection();
-        $pdo = $conect->openConnection();
-        $query = "DELETE FROM temp_cart WHERE Id=$id";
-        //Preparar el query a ejecutar
-        $result = $pdo->prepare($query);
-        // Si se logro ejutar con exito
-        if($result->execute()){
-            return TRUE;
-        }
+            $conect =  new Connection();
+            $pdo = $conect->openConnection();
+            $query = "DELETE FROM temp_cart WHERE Id=$id";
+            //Preparar el query a ejecutar
+            $result = $pdo->prepare($query);
+            // Si se logro ejutar con exito
+            if($result->execute()){
+                return TRUE;
+            }
         } catch (Exception $ex) {
-        // Captura de error
-        error_log("Error in ".__FUNCTION__.":". $ex->getTraceAsString());
+            // Captura de error
+            error_log("Error in ".__FUNCTION__.":". $ex->getTraceAsString());
         }
         // En caso de llegar a esta linea significa que existio algun error
         return FALSE;
@@ -100,23 +100,23 @@
     }
     
     /**
-     * Actualiza un elemento en la base datos usando la tala producto
+     * Actualiza un elemento en la base datos usando la tabla carrito
      * @param Users $content Objeto de tipo BasicContent
      * @return boolean si fue exitoso el insert
      */
-    // public function update(Users $content){
-    //     try {
-    //     // Abro la base de datos
-    //     $conect = new Connection();
-    //     $pdo = $conect->openConnection();
-    //     // EJECUTAR SENTENCIA 
-    //     $query = "UPDATE user SET name = '".$content->name."', email =".$content->email.", password ='".$content->password."' WHERE id=$content->id";
-    //     if($pdo->query($query)){
-    //         return TRUE;
-    //     }
-    //     } catch (Exception $exc) {
-    //     error_log("Error in ".__FUNCTION__.":". $exc->getTraceAsString());
-    //     }
-    //     return FALSE;
-    // }
+    public function truncate(){
+        try {
+            // Abro la base de datos
+            $conect = new Connection();
+            $pdo = $conect->openConnection();
+            // EJECUTAR SENTENCIA 
+            $query = "TRUNCATE TABLE temp_cart";
+            if($pdo->query($query)){
+                return TRUE;
+            }
+        } catch (Exception $exc) {
+            error_log("Error in ".__FUNCTION__.":". $exc->getTraceAsString());
+        }
+        return FALSE;
+    }
 }

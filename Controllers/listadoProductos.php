@@ -1,6 +1,6 @@
 <?php
-
 require 'Models/productos.php';
+
 switch ($action) {
     case 'listado':
         $contenido = new productos();

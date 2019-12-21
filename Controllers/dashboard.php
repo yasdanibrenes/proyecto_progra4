@@ -4,19 +4,9 @@
     require 'Models/products.php';
     require 'Models/users.php';
 
-    $oCount = 1;
-    $sCount = 1;
-    $pCount = 1;
-    $uCount = 1;
-
-    switch($action){
-        case 'publicList':
-            $contenido = new Services();
-            $elements = $contenido->select();
-            require 'Views/dashboard.php';
-        break;
+    $oCount = 0;
+    $sCount = 0;
+    $pCount = 0;
+    $uCount = 0;
     
-        default :
-      require 'Views/dashboard.php';
-    break;
-  }
+    require_once 'Views/dashboard.php';

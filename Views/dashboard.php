@@ -77,7 +77,7 @@
                         <div class="card-body-icon">
                         <span data-feather="zap"></span>
                         </div>
-                        <div class="mr-5"><?php echo $sCount ?>Services!</div>
+                        <div class="mr-5"><?php //echo $sCount ?>Services!</div>
                     </div>
                     <a class="card-footer text-white clearfix small z-1" href="admin-services.php">
                         <span class="float-left">View Details</span>
@@ -125,29 +125,6 @@
 
             <canvas class="my-4 w-100" id="myChart" width="800" height="200"></canvas>
 
-            <h2>Section title</h2>
-            <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>Lorem</td>
-                        <td>ipsum</td>
-                        <td>dolor</td>
-                        <td>sit</td>
-                    </tr>
-                </tbody>
-                </table>
-            </div>
             </main>
         </div>
     </div>

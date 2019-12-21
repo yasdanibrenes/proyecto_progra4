@@ -1,5 +1,6 @@
 <?php
     require 'Models/users.php';
+    
     switch($action){
         case 'list':
         $contenido = new Users();

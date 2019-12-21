@@ -4,7 +4,7 @@
     <!-- Page Header -->
     <div class="row text-center text-dark mb-5">
         <div class="col-lg-7 mx-auto">
-            <h1 class="display-4">Tires Detail</h1>
+            <h1 class="display-4">Product Detail</h1>
         </div>
     </div>
     <!-- End -->
@@ -44,6 +44,7 @@
                     <!-- Custom content-->
                     <div class="media align-items-lg-center flex-column flex-lg-row p-3">
                         <a href="productos.php?" class="btn btn-primary"><i class="fa fa-undo" aria-hidden="true"></i> Back</a>
+                        <a href="cart.php?c=add&id=<?php echo (isset($element)) ? $element->get_element('id') : '' ?>&name=<?php echo (isset($element)) ? $element->get_element(urlencode('descripcion')) : '' ?>&price=<?php echo (isset($element)) ? $element->get_element('precio') : '$ 0.00' ?>" class="btn btn-primary" style="margin-left: 15px;"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</a>
                     </div>
                     <!-- End -->
                 </li>
@@ -53,4 +54,5 @@
             <!-- End -->
         </div>
     </div>
+    <?php require_once "Views/footer.php"; ?>
 </div>
