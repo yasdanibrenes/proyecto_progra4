@@ -14,6 +14,7 @@ if (!isset($_SESSION['user'])) {
         <?php
           // la variable c enviada por parametro es la accion a ejecutar en caso de no llegar va a ser listado por defecto.
           $action = (isset($_GET['c'])) ? $_GET['c'] : 'list';
+                                
           require_once 'Controllers/users.php';
         ?>
     <?php require_once "Views/admin_footer.php"; ?>
