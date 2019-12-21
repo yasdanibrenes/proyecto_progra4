@@ -7,12 +7,11 @@
 
     </head>
     <body>
-    <?php require_once "Views/header.php"; ?>
+    <?php 
+        require_once "Views/header.php"; 
 
-    <?php
         require_once 'Views/thanks.php';
-    
-        require_once "Views/footer.php"; ?>
+    ?>
     <div>
     </body>
 </html>

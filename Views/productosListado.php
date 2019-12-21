@@ -117,7 +117,7 @@
                                         <td>' . $element->get_element("imagen") . '</td>
                                         <td><a href=admin-products.php?c=editar&id=' . $element->get_element("id") . '><span data-feather="edit-2"></span>Edit  </a>'
                                     . '<a href=admin-products.php?c=ver&id=' . $element->get_element("id") . '><span data-feather="eye"></span> View  </a>'
-                                    . '<a href=admin-products.php?c=borrar&id=' . $element->get_element("id") . '><span data-feather="trash-2"></span>Delete  </a></td>
+                                    . '<a href=admin-products.php?c=borrar&id=' . $element->get_element("id") . '><span data-feather="trash-2"></span> Delete  </a></td>
                                         </tr>';
                             }
                         } else {

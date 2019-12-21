@@ -1,6 +1,7 @@
 <?php
 // Incluir la clase que maneja la base de datos
 require 'connection.php';
+
 class BasicContent{
   // Atributos
   private $id;

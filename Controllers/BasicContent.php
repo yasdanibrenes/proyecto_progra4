@@ -1,5 +1,6 @@
 <?php
   require 'Models/BasicContent.php';
+  
   switch($action){
     case 'publicList':
         $contenido = new BasicContent();

@@ -25,7 +25,7 @@
                 }
             } else {
                 echo '<h2>No services available to show.</h2>';
-                }
+            }
         ?>
 
         </div>

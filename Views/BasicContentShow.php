@@ -54,7 +54,7 @@
                 <a class="d-flex align-items-center text-muted" href="admin.php" aria-label="Back Home" title="Back to Home">
                     <span data-feather="home"></span>
                 </a>
-                <a class="d-flex align-items-center text-muted" href="admin-products.php?c=agregar" aria-label="Add a new user" title="Add a new user">
+                <a class="d-flex align-items-center text-muted" href="admin-content.php?c=add" aria-label="Add a new content" title="Add a new content">
                     <span data-feather="plus-circle"></span>
                 </a>
             </div>
@@ -65,19 +65,19 @@
         <?php echo (isset($msg)) ?  '<div class="alert alert-danger" role="alert">' . $msg . '</div>' : ''; ?>
             <div class="form-group">
                 <label for="ID">ID:</label>
-                <input class="form-control" type="text" name="ID" <?php echo (isset($element)) ?  'value="' . $element->get_element('ID') . '"' : '' ?> readonly>
+                <input class="form-control" type="text" name="id" <?php echo (isset($element)) ?  'value="' . $element->get_element('id') . '"' : '' ?> readonly>
             </div>
             <div class="form-group">
                 <label for="Tittle">Tittle:</label>
-                <input class="form-control" type="text" name="Tittle" <?php echo (isset($element)) ?  'value="' . $element->get_element('Tittle') . '"' : '' ?> readonly>
+                <input class="form-control" type="text" name="tittle" <?php echo (isset($element)) ?  'value="' . $element->get_element('tittle') . '"' : '' ?> readonly>
             </div>
             <div class="form-group">
                 <label for="Description">Description:</label>
-                <textarea disabled class="form-control" name="Description"><?php echo (isset($element)) ?  $element->get_element('Description') : '' ?></textarea>
+                <textarea disabled class="form-control" name="description"><?php echo (isset($element)) ?  $element->get_element('description') : '' ?></textarea>
             </div>
 
-            <a href="admin-products.php?"  class="btn">Volver</a> 
-            <a class="btn" href="admin-products.php?c=editar&id=<?php echo $element->get_element("id"); ?>">Editar</a>
+            <a href="admin-content.php" class="btn btn-primary"><span data-feather="corner-up-left"></span>Back</a> 
+            <a class="btn btn-primary" href="admin-content.php?c=edit&id=<?php echo $element->get_element("id"); ?>">Edit</a>
         </form>
 
 

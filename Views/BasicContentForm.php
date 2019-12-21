@@ -54,7 +54,7 @@
                     <a class="d-flex align-items-center text-muted" href="admin.php" aria-label="Back Home" title="Back to Home">
                         <span data-feather="home"></span>
                     </a>
-                    <a class="d-flex align-items-center text-muted" href="admin-content.php?c=agregar" aria-label="Add a new user" title="Add a new user">
+                    <a class="d-flex align-items-center text-muted" href="admin-content.php?c=add" aria-label="Add a new content" title="Add a new content">
                         <span data-feather="plus-circle"></span>
                     </a>
                 </div>
@@ -64,20 +64,16 @@
             <form method="POST">
             <?php echo (isset($msg)) ?  '<div class="alert alert-danger" role="alert">' . $msg . '</div>' : ''; ?>
                 <div class="form-group">
-                    <label for="name">id:</label>
-                    <input class="form-control" type="text" name="Id" <?php echo (isset($element)) ?  'value="' . $element->get_element('Id') . '"' : '' ?>>
-                </div>
-                <div class="form-group">
                     <label for="name">Tittle:</label>
                     <input class="form-control" type="text" name="tittle" <?php echo (isset($element)) ?  'value="' . $element->get_element('tittle') . '"' : '' ?>>
                 </div>
                 <div class="form-group">
                     <label for="titulo">Description:</label>
-                    <input class="form-control" type="text" name="Description" <?php echo (isset($element)) ?  'value="' . $element->get_element('Description') . '"' : '' ?>>
+                    <textarea class="form-control" name="description"><?php echo (isset($element)) ?  'value="' . $element->get_element('description') . '"' : '' ?></textarea>
                 </div>
                 <input type="hidden" name="id" <?php echo (isset($element))? 'value="'.$element->get_element('id').'"' : '' ?>>
-                <input class="btn btn-primary" type="submit" value="Enviar">
-                <a href="admin-products.php" class="btn btn-primary">Volver</a>
+                <a href="admin-content.php" class="btn btn-primary"><span data-feather="corner-up-left"></span>Back</a>
+                <input class="btn btn-primary" type="submit" value="Add">
             </form>
 
 

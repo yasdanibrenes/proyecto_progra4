@@ -77,10 +77,10 @@
                             foreach ($elements as $element) {
                                 echo '<tr>
                                         <td>' . $element->get_element("tittle") . '</td>
-                                        <td>' . $element->get_element("Description") . '</td>
-                                        <td><a href=admin-content.php?c=edit&id=' . $element->get_element("id") . '>Edit  </a>'
-                                    . '<a href=admin-products.php?c=view&id=' . $element->get_element("id") . '>View  </a>'
-                                    . '<a href=admin-products.php?c=delete&id=' . $element->get_element("id") . '>Delete  </a></td>
+                                        <td>' . substr($element->get_element("description"), 0, 100) . '</td>
+                                        <td><a href=admin-content.php?c=edit&id=' . $element->get_element("id") . '><span data-feather="edit-2"></span> Edit </a>'
+                                    . '<a href=admin-content.php?c=view&id=' . $element->get_element("id") . '><span data-feather="eye"></span> View </a>'
+                                    . '<a href=admin-content.php?c=delete&id=' . $element->get_element("id") . '><span data-feather="trash-2"></span> Delete</a></td>
                                         </tr>';
                             }
                         } else {

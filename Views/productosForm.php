@@ -54,7 +54,7 @@
                     <a class="d-flex align-items-center text-muted" href="admin.php" aria-label="Back Home" title="Back to Home">
                         <span data-feather="home"></span>
                     </a>
-                    <a class="d-flex align-items-center text-muted" href="admin-products.php?c=agregar" aria-label="Add a new product" title="Add a new product">
+                    <a class="d-flex align-items-center text-muted" href="admin-content.php?c=agregar" aria-label="Add a new product" title="Add a new product">
                         <span data-feather="plus-circle"></span>
                     </a>
                 </div>

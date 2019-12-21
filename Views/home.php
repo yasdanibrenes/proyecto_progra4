@@ -51,17 +51,35 @@
 <div class="container">
     <section class="pageSection">    
         <div class="container">
-            <h1>Album example</h1>
+            <h1>Wheels LLC</h1>
             <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
             <p>
-                <a href="about.php" class="btn btn-primary my-2">Main call to action</a>
+                <a href="about.php" class="btn btn-primary my-2">About us</a>
             </p>
         </div>
     </section>
 
     <section class="py-5 bg-image-full" style="background-image: url('https://www.ncforeigncar.com/Images/banner-alignment.jpg');">
-    <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
-    <div style="height: 200px;"></div>
+        <div style="height: 275px;"></div>
+    </section>
+
+    <section class="pageSection">
+        <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+        <div class="col-md-6">
+            <h2>Services</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="services.php" role="button">View services »</a></p>
+        </div>
+        <div class="col-md-6">
+            <h2>Products</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="products.php" role="button">View products »</a></p>
+        </div>
+        </div>
+        </div>
+        <hr>
     </section>
 
     <section class="pageSection">
@@ -71,42 +89,14 @@
                 <div class="col-md-6">
                     <h2>Vision</h2>
                     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
                 </div>
                 <div class="col-md-6">
                     <h2>Mission</h2>
                     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="pageSection">
-    <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2>About Us</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#about.php" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Services</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Products</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-    </div>
-    </div>
-    <hr>
 
-  </div>
-    <?php require_once 'Views/footer.php'; ?>
+    <?php require_once 'Views/footer.php'; ?>    
 </div>
-
-            <?php require_once 'Views/footer.php'; ?>
-        </div>
