@@ -6,12 +6,24 @@
                     <li class="nav-item">
                         <a class="nav-link" href="admin.php">
                         <span data-feather="home"></span>
-                        Dashboard 
+                        Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-content.php">
+                        <span data-feather="file"></span>
+                        Basic Content
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-services.php">
+                        <span data-feather="zap"></span>
+                        Services
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="admin-products.php">
-                        <span data-feather="shopping-cart"></span>
+                        <span data-feather="package"></span>
                         Products
                         </a>
                     </li>
@@ -48,25 +60,35 @@
             </div>
 
             <div class="table-responsive">
+                <?php echo (isset($msg)) ?  '<div class="alert alert-success" role="alert">' . $msg . '</div>' : ''; ?>
                 <table class="table table-striped table-sm">
                 <thead>
                     <tr>
-                    <th>#</th>
-                    <th>Header</th>
-                    <th>Header</th>
-                    <th>Header</th>
-                    <th>Header</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                    <td>1,001</td>
-                    <td>Lorem</td>
-                    <td>ipsum</td>
-                    <td>dolor</td>
-                    <td>sit</td>
-                    </tr>
-                    <tr>
+                    <?php
+                    if (count($elements)) {
+                        foreach ($elements as $element) {
+                            echo '<tr>
+                                    <td>' . $element->get_element("id") . '</td>
+                                    <td>' . $element->get_element("name") . '</td>
+                                    <td>' . $element->get_element("email") . '</td>
+                                    <td><input class="showInputPass" type="password" value="' . $element->get_element("password") . '" readonly></td>
+                                    <td><a href=admin-users.php?c=edit&id=' . $element->get_element("id") . '><span data-feather="edit-2"></span> Edit </a>'
+                                    . '<a href=admin-users.php?c=view&id=' . $element->get_element("id") . '><span data-feather="eye"></span> View </a>'
+                                    . '<a href=admin-users.php?c=delete&id=' . $element->get_element("id") . '><span data-feather="trash-2"></span> Delete</a></td>
+                                </tr>';
+                            }
+                        } else {
+                            echo '<h2>No users available to show.</h2>';
+                        }
+                    ?>
                 </tbody>
                 </table>
             </div>

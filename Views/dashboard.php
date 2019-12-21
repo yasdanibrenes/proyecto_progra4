@@ -72,6 +72,23 @@
                 </div>
 
                 <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white bg-info o-hidden h-100">
+                    <div class="card-body">
+                        <div class="card-body-icon">
+                        <span data-feather="zap"></span>
+                        </div>
+                        <div class="mr-5"><?php echo $sCount ?>Services!</div>
+                    </div>
+                    <a class="card-footer text-white clearfix small z-1" href="admin-services.php">
+                        <span class="float-left">View Details</span>
+                        <span class="float-right">
+                        <span data-feather="chevron-right"></span>
+                        </span>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-sm-6 mb-3">
                     <div class="card text-white bg-warning o-hidden h-100">
                     <div class="card-body">
                         <div class="card-body-icon">
@@ -106,7 +123,7 @@
                 </div>
             </div>
 
-            <canvas class="my-4 w-100" id="myChart" width="900" height="200"></canvas>
+            <canvas class="my-4 w-100" id="myChart" width="800" height="200"></canvas>
 
             <h2>Section title</h2>
             <div class="table-responsive">

@@ -1,8 +1,6 @@
 <?php 
-if(!isset($_SESSION['user'])){ 
-  if (session_status() !== PHP_SESSION_ACTIVE){
-    session_start();
-  }  
+session_start();  
+if (!isset($_SESSION['user'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en" class=" -webkit-">
@@ -10,9 +8,10 @@ if(!isset($_SESSION['user'])){
         <meta charset="UTF-8">
         <title>Wheels - Admin Panel</title>
         <?php include 'Views/admin_head.php'; ?>
+
     </head>
-        <body>
-        <?php require_once "Views/admin_header.php";?>
+    <body>
+      <?php require_once "Views/admin_header.php";?>
         <?php
         if ($_GET) {
           require_once 'Controllers/' . $_GET['c'] . '.php';

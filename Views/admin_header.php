@@ -3,7 +3,7 @@
                 <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="admin.php">Wheels - Admin Panel</a>
             <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
-                <a class="nav-link" href="logout.php"><span data-feather="power"></span> Sign out</a>
+                <a class="nav-link" href="logout.php"><span data-feather="log-out"></span> Sign out</a>
                 </li>
             </ul>
             </nav>
